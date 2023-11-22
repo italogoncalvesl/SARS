@@ -2,12 +2,23 @@ import {
   ArrowDown,
   Blur,
   BoxSearch,
+  Data,
   EmojiSad,
   HambergerMenu,
+  Send,
 } from "iconsax-react";
 import Image from "next/image";
 
 const mainColor = "#4D77FF";
+
+const questionsData = [
+  { id: 0, title: "pergunta 1" },
+  { id: 1, title: "pergunta 2" },
+  { id: 2, title: "pergunta 3" },
+  { id: 3, title: "pergunta 4" },
+  { id: 4, title: "pergunta 5" },
+  { id: 5, title: "pergunta 6" },
+];
 
 export default function Home() {
   return (
@@ -89,6 +100,38 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </section>
+
+      <section className="flex flex-col items-center justify-center w-4/5">
+        <div className="text-center items-center justify-center gap-8 flex flex-col">
+          <h2 className="text-3xl">Responda algumas breves perguntas</h2>
+          <p className="text-gray-700 font-medium">
+            Elas serão importantes para classificarmos você em algum grupo
+          </p>
+        </div>
+
+        <form>
+          <div className="flex gap-8 flex-col items-center justify-center w-4/5">
+            {questionsData.map((question) => (
+              <div
+                key={question.id}
+                className="flex flex-col items-start justify-center w-full gap-3"
+              >
+                <p>{question.title}</p>
+                <input
+                  type="text"
+                  placeholder="Digite sua resposta"
+                  className="bg-white flex items-start justify-center shadow-xl shadow-gray-300 rounded-lg p-6"
+                />
+              </div>
+            ))}
+
+            <button className="bg-main rounded-lg py-4 w-[200px] flex flex-row text-white items-center justify-center gap-2">
+              <p>Enviar</p>
+              <Send variant="TwoTone" color="#fff" size={32} />
+            </button>
+          </div>
+        </form>
       </section>
     </main>
   );
