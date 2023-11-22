@@ -1,51 +1,37 @@
+import Nav from "@/components/nav";
+import { mainColor } from "@/utils/colors";
 import {
   ArrowDown,
-  ArrowUp,
   ArrowUp2,
   Blur,
   BoxSearch,
-  Data,
   EmojiSad,
-  HambergerMenu,
   Send,
 } from "iconsax-react";
 import Image from "next/image";
 
-const mainColor = "#4D77FF";
-
 const questionsData = [
-  { id: 0, title: "pergunta 1" },
-  { id: 1, title: "pergunta 2" },
-  { id: 2, title: "pergunta 3" },
-  { id: 3, title: "pergunta 4" },
-  { id: 4, title: "pergunta 5" },
-  { id: 5, title: "pergunta 6" },
+  { id: 0, title: "Pergunta 1" },
+  { id: 1, title: "Pergunta 2" },
+  { id: 2, title: "Pergunta 3" },
+  { id: 3, title: "Pergunta 4" },
+  { id: 4, title: "Pergunta 5" },
+  { id: 5, title: "Pergunta 6" },
 ];
 
 export default function Home() {
   return (
-    <main className="flex flex-col pt-[100px] gap-20 items-center justify-start w-screen min-h-screen bg-white text-black">
-      <nav className="flex z-20 bg-white fixed top-0 flex-row items-center justify-between max-w-7xl w-4/5 h-[100px]">
-        <Image
-          alt="Logomarca"
-          width={220}
-          height={33}
-          src={"/images/logo.svg"}
-        />
-
-        <button>
-          <HambergerMenu size="32" color={mainColor} variant="TwoTone" />
-        </button>
-      </nav>
+    <main className="flex flex-col py-[100px] gap-20 items-center justify-start w-screen min-h-screen bg-white text-black">
+      <Nav />
 
       <section
         id="home"
         className="flex flex-col items-center justify-center w-4/5"
       >
         <div className="text-center items-center justify-center gap-8 flex flex-col px-2">
-          <h1 className="text-6xl">Sindrome respiratória aguda</h1>
+          <h1 className="text-6xl">Síndrome respiratória aguda?</h1>
           <p className="text-main text-lg font-medium">
-            Você sabe em qual grupo de risco está?
+            Saiba em qual grupo de risco está!
           </p>
           <a
             href="#form"
@@ -75,7 +61,7 @@ export default function Home() {
           <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 p-6">
             <div className="flex w-full bg-main absolute top-0 left-0 h-[1px]"></div>
 
-            <Blur size="32" color={mainColor} variant="TwoTone" />
+            <Blur size="32" color={`${mainColor}`} variant="TwoTone" />
             <h3 className="text-main font-medium">Fora do grupo de risco</h3>
             <p>
               After conducting an examination with a specialist we can help find
@@ -86,7 +72,7 @@ export default function Home() {
           <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 p-6">
             <div className="flex w-full bg-main absolute top-0 left-0 h-[1px]"></div>
 
-            <BoxSearch size="32" color={mainColor} variant="TwoTone" />
+            <BoxSearch size="32" color={`${mainColor}`} variant="TwoTone" />
             <h3 className="text-main font-medium">Potencial grupo de risco</h3>
             <p>
               After conducting an examination with a specialist we can help find
@@ -97,7 +83,7 @@ export default function Home() {
           <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 p-6">
             <div className="flex w-full bg-main absolute top-0 left-0 h-[1px]"></div>
 
-            <EmojiSad size="32" color={mainColor} variant="TwoTone" />
+            <EmojiSad size="32" color={`${mainColor}`} variant="TwoTone" />
             <h3 className="text-main font-medium">Grupo de risco</h3>
             <p>
               After conducting an examination with a specialist we can help find
