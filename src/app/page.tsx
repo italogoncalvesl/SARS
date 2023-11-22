@@ -1,5 +1,7 @@
 import {
   ArrowDown,
+  ArrowUp,
+  ArrowUp2,
   Blur,
   BoxSearch,
   Data,
@@ -46,7 +48,7 @@ export default function Home() {
             Você sabe em qual grupo de risco está?
           </p>
           <a
-            href="#"
+            href="#form"
             className="bg-main rounded-lg py-4 w-[200px] flex flex-row text-white items-center justify-center gap-2"
           >
             <p>Fazer teste</p>
@@ -60,7 +62,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-center w-4/5">
+      <section
+        id="about"
+        className="flex flex-col items-center justify-center w-4/5"
+      >
         <div className="text-center items-center justify-center gap-8 flex flex-col">
           <p className="text-main font-medium">A ideia principal</p>
           <h2 className="text-3xl">Queremos classificar você em algum grupo</h2>
@@ -102,7 +107,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-center w-4/5 gap-6">
+      <section
+        id="form"
+        className="flex flex-col items-center justify-center w-4/5 gap-6"
+      >
         <div className="text-center items-center justify-center gap-8 flex flex-col">
           <h2 className="text-4xl">Responda algumas breves perguntas</h2>
           <p className="text-gray-700 text-sm font-medium">
@@ -131,6 +139,45 @@ export default function Home() {
           </button>
         </form>
       </section>
+
+      <footer className="flex flex-col items-start justify-center w-4/5 gap-8 text-gray-700">
+        <div className="flex flex-col items-start justify-center gap-3">
+          <Image
+            alt="Logomarca"
+            width={220}
+            height={33}
+            src={"/images/logo.svg"}
+          />
+
+          <p>
+            This free App provides a solution to your health needs by offering
+            you a one-stop access to complete information about various medical
+            checkups. This App carries simple tips and advice to help you
+            maintain a healthy lifestyle.
+          </p>
+        </div>
+
+        <div className="flex flex-col items-start justify-center gap-3">
+          <p className="text-main font-medium">Devs</p>
+
+          <a href="#">Emmanuel Rodrigues</a>
+          <a href="#">Nikollas Rufino</a>
+          <a href="#">Italo Gonçalves</a>
+        </div>
+
+        <div className="flex flex-col items-start justify-center gap-3">
+          <p className="text-main font-medium">Instituição</p>
+
+          <a href="#">UNIFAP</a>
+        </div>
+      </footer>
+
+      <a
+        href="#"
+        className="rounded-full bg-main shadow-xl shadow-gray-300 fixed bottom-4 right-4 p-6"
+      >
+        <ArrowUp2 color="#fff" size={24} />
+      </a>
     </main>
   );
 }
