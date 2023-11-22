@@ -155,7 +155,7 @@ export default function Home() {
           <a className="underline" href="https://github.com/Ndav07">
             Nikollas Rufino
           </a>
-          <a className="underline" href="#">
+          <a className="underline" href="https://github.com/italogoncalvesl">
             Italo Gonçalves
           </a>
         </div>
