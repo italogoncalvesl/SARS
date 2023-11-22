@@ -12,7 +12,7 @@ const mainColor = "#4D77FF";
 export default function Home() {
   return (
     <main className="flex flex-col pt-[100px] gap-20 items-center justify-start w-screen min-h-screen bg-white text-black">
-      <nav className="flex bg-white fixed top-0 flex-row items-center justify-between max-w-7xl w-4/5 h-[100px]">
+      <nav className="flex z-20 bg-white fixed top-0 flex-row items-center justify-between max-w-7xl w-4/5 h-[100px]">
         <Image
           alt="Logomarca"
           width={220}
@@ -29,8 +29,8 @@ export default function Home() {
         id="home"
         className="flex flex-col items-center justify-center w-4/5"
       >
-        <div className="text-center items-center justify-center gap-8 flex flex-col">
-          <h1 className="text-7xl">Sindrome respiratória aguda</h1>
+        <div className="text-center items-center justify-center gap-8 flex flex-col px-2">
+          <h1 className="text-6xl">Sindrome respiratória aguda</h1>
           <p className="text-main text-lg font-medium">
             Você sabe em qual grupo de risco está?
           </p>
