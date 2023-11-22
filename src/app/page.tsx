@@ -1,5 +1,4 @@
 import Nav from "@/components/nav";
-import { mainColor } from "@/utils/colors";
 import {
   ArrowDown,
   ArrowUp2,
@@ -61,7 +60,7 @@ export default function Home() {
           <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 p-6">
             <div className="flex w-full bg-main absolute top-0 left-0 h-[1px]"></div>
 
-            <Blur size="32" color={`${mainColor}`} variant="TwoTone" />
+            <Blur size="32" color="#4D77FF" variant="TwoTone" />
             <h3 className="text-main font-medium">Fora do grupo de risco</h3>
             <p>
               After conducting an examination with a specialist we can help find
@@ -72,7 +71,7 @@ export default function Home() {
           <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 p-6">
             <div className="flex w-full bg-main absolute top-0 left-0 h-[1px]"></div>
 
-            <BoxSearch size="32" color={`${mainColor}`} variant="TwoTone" />
+            <BoxSearch size="32" color="#4D77FF" variant="TwoTone" />
             <h3 className="text-main font-medium">Potencial grupo de risco</h3>
             <p>
               After conducting an examination with a specialist we can help find
@@ -83,7 +82,7 @@ export default function Home() {
           <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 p-6">
             <div className="flex w-full bg-main absolute top-0 left-0 h-[1px]"></div>
 
-            <EmojiSad size="32" color={`${mainColor}`} variant="TwoTone" />
+            <EmojiSad size="32" color="#4D77FF" variant="TwoTone" />
             <h3 className="text-main font-medium">Grupo de risco</h3>
             <p>
               After conducting an examination with a specialist we can help find
