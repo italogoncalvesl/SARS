@@ -102,35 +102,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-center w-4/5">
+      <section className="flex flex-col items-center justify-center w-4/5 gap-6">
         <div className="text-center items-center justify-center gap-8 flex flex-col">
-          <h2 className="text-3xl">Responda algumas breves perguntas</h2>
-          <p className="text-gray-700 font-medium">
+          <h2 className="text-4xl">Responda algumas breves perguntas</h2>
+          <p className="text-gray-700 text-sm font-medium">
             Elas serão importantes para classificarmos você em algum grupo
           </p>
         </div>
 
-        <form>
-          <div className="flex gap-8 flex-col items-center justify-center w-4/5">
-            {questionsData.map((question) => (
-              <div
-                key={question.id}
-                className="flex flex-col items-start justify-center w-full gap-3"
-              >
-                <p>{question.title}</p>
-                <input
-                  type="text"
-                  placeholder="Digite sua resposta"
-                  className="bg-white flex items-start justify-center shadow-xl shadow-gray-300 rounded-lg p-6"
-                />
-              </div>
-            ))}
+        <form className="flex gap-8 flex-col items-center justify-center">
+          {questionsData.map((question) => (
+            <div
+              key={question.id}
+              className="flex flex-col items-start justify-center w-full gap-3"
+            >
+              <p>{question.title}</p>
+              <input
+                type="text"
+                placeholder="Digite sua resposta"
+                className="bg-white flex items-start justify-center shadow-xl shadow-gray-300 rounded-lg p-6"
+              />
+            </div>
+          ))}
 
-            <button className="bg-main rounded-lg py-4 w-[200px] flex flex-row text-white items-center justify-center gap-2">
-              <p>Enviar</p>
-              <Send variant="TwoTone" color="#fff" size={32} />
-            </button>
-          </div>
+          <button className="bg-main rounded-lg py-4 w-[200px] flex flex-row text-white items-center justify-center gap-2">
+            <p>Enviar</p>
+            <Send variant="TwoTone" color="#fff" size={32} />
+          </button>
         </form>
       </section>
     </main>
