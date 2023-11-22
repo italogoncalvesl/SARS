@@ -1,4 +1,5 @@
 import Nav from "@/components/nav";
+import DarkModeButton from "@/components/ui/darkModeButton";
 import {
   ArrowDown,
   ArrowUp2,
@@ -20,7 +21,7 @@ const questionsData = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col py-[100px] gap-20 items-center justify-start w-screen min-h-screen bg-white text-black">
+    <main className="flex flex-col py-[100px] gap-20 items-center justify-start w-screen min-h-screen bg-white text-black dark:bg-dark dark:text-white">
       <Nav />
 
       <section
@@ -57,8 +58,8 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-12 items-center justify-start mt-12">
-          <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 p-6">
-            <div className="flex w-full bg-main absolute top-0 left-0 h-[1px]"></div>
+          <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 dark:shadow-main/40 p-6">
+            <div className="flex w-full bg-main dark:bg-white absolute top-0 left-0 h-[1px]"></div>
 
             <Blur size="32" color="#4D77FF" variant="TwoTone" />
             <h3 className="text-main font-medium">Fora do grupo de risco</h3>
@@ -68,8 +69,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 p-6">
-            <div className="flex w-full bg-main absolute top-0 left-0 h-[1px]"></div>
+          <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 dark:shadow-main/40 p-6">
+            <div className="flex w-full bg-main dark:bg-white absolute top-0 left-0 h-[1px]"></div>
 
             <BoxSearch size="32" color="#4D77FF" variant="TwoTone" />
             <h3 className="text-main font-medium">Potencial grupo de risco</h3>
@@ -79,8 +80,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 p-6">
-            <div className="flex w-full bg-main absolute top-0 left-0 h-[1px]"></div>
+          <div className="flex relative h-[250px] flex-col items-start gap-4 justify-center w-4/5 rounded-lg shadow-2xl shadow-gray-400 dark:shadow-main/40 p-6">
+            <div className="flex w-full bg-main dark:bg-white absolute top-0 left-0 h-[1px]"></div>
 
             <EmojiSad size="32" color="#4D77FF" variant="TwoTone" />
             <h3 className="text-main font-medium">Grupo de risco</h3>
@@ -98,7 +99,7 @@ export default function Home() {
       >
         <div className="text-center items-center justify-center gap-8 flex flex-col">
           <h2 className="text-4xl">Responda algumas breves perguntas</h2>
-          <p className="text-gray-700 text-sm font-medium">
+          <p className="text-gray-700 dark:text-gray-300 text-sm font-medium">
             Elas serão importantes para classificarmos você em algum grupo
           </p>
         </div>
@@ -113,7 +114,7 @@ export default function Home() {
               <input
                 type="text"
                 placeholder="Digite sua resposta"
-                className="bg-white flex items-start justify-center shadow-xl shadow-gray-300 rounded-lg p-6"
+                className="bg-white dark:bg-dark flex items-start justify-center shadow-xl shadow-gray-300 dark:shadow-main/30 rounded-lg p-6"
               />
             </div>
           ))}
@@ -125,13 +126,21 @@ export default function Home() {
         </form>
       </section>
 
-      <footer className="flex flex-col items-start justify-center w-4/5 gap-8 text-gray-700">
+      <footer className="flex flex-col items-start justify-center w-4/5 gap-8 text-gray-700 dark:text-gray-300">
         <div className="flex flex-col items-start justify-center gap-3">
           <Image
             alt="Logomarca"
             width={220}
             height={33}
             src={"/images/logo.svg"}
+            className="flex dark:hidden"
+          />
+          <Image
+            alt="Logomarca"
+            width={220}
+            height={33}
+            src={"/images/logoDarkMode.svg"}
+            className="hidden dark:flex"
           />
 
           <p>
@@ -157,11 +166,12 @@ export default function Home() {
         </div>
       </footer>
 
+      <DarkModeButton />
       <a
         href="#"
-        className="rounded-full bg-main shadow-xl shadow-gray-300 fixed bottom-4 right-4 p-6"
+        className="rounded-full bg-main shadow-xl shadow-gray-300 dark:shadow-main/30 fixed bottom-4 right-4 p-6"
       >
-        <ArrowUp2 color="#fff" size={24} />
+        <ArrowUp2 color="#fff" size={18} />
       </a>
     </main>
   );

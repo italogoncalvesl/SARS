@@ -12,13 +12,16 @@ const menuData = [
 
 export default function Nav() {
   const [openMenu, setOpenMenu] = useState(false);
+
   function handleMenu() {
     setOpenMenu(!openMenu);
   }
   return (
     <nav
       className={`flex z-20 fixed top-0 w-full flex-col h-fit items-center ease-linear duration-300 ${
-        !openMenu ? "bg-white" : "bg-white/30 backdrop-blur-sm"
+        !openMenu
+          ? "bg-white dark:bg-dark"
+          : "bg-white/30 dark:bg-dark/30 backdrop-blur-sm"
       }`}
     >
       <div className="flex flex-row items-center justify-between max-w-7xl w-4/5 h-[100px]">
@@ -27,8 +30,15 @@ export default function Nav() {
           width={220}
           height={33}
           src={"/images/logo.svg"}
+          className="flex dark:hidden"
         />
-
+        <Image
+          alt="Logomarca"
+          width={220}
+          height={33}
+          src={"/images/logoDarkMode.svg"}
+          className="hidden dark:flex"
+        />
         <button onClick={handleMenu}>
           {openMenu ? (
             <HambergerMenu size="32" color="#4D77FF" variant="TwoTone" />
@@ -42,7 +52,7 @@ export default function Nav() {
         className={` ${
           openMenu
             ? "opacity-0 h-[0px] pb-0"
-            : "opacity-100 h-[160px] pb-2 border-t-2 border-main/40"
+            : "opacity-100 h-[160px] border-t-2 border-main/40"
         } flex flex-col w-full items-center justify-center gap-4 ease-linear duration-300`}
       >
         {menuData.map((item) => (
