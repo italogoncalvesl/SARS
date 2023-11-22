@@ -23,7 +23,7 @@ export default function Motion({
       variants={direction === "left" ? RightToLeft : BotToTop}
       key={identifier}
       ref={scrollRef}
-      className={className ? className : ""}
+      className={className ? className : undefined}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 1 }}
