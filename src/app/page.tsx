@@ -21,7 +21,7 @@ const questionsData = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col py-[100px] gap-20 items-center justify-start w-screen min-h-screen bg-white text-black dark:bg-dark dark:text-white">
+    <main className="flex flex-col pt-[100px] gap-20 items-center justify-start w-screen min-h-screen bg-white text-black dark:bg-dark dark:text-white">
       <Nav />
 
       <section
@@ -126,52 +126,65 @@ export default function Home() {
         </form>
       </section>
 
-      <footer className="flex flex-col items-start justify-center w-4/5 gap-8 text-gray-700 dark:text-gray-300">
+      <footer className="flex bg-main text-sm px-[10%] text-white flex-col items-start justify-center w-full py-[100px] gap-8 dark:text-white">
         <div className="flex flex-col items-start justify-center gap-3">
           <Image
             alt="Logomarca"
             width={220}
             height={33}
-            src={"/images/logo.svg"}
-            className="flex dark:hidden"
-          />
-          <Image
-            alt="Logomarca"
-            width={220}
-            height={33}
-            src={"/images/logoDarkMode.svg"}
-            className="hidden dark:flex"
+            src={"/images/footerLogo.svg"}
           />
 
           <p>
-            This free App provides a solution to your health needs by offering
-            you a one-stop access to complete information about various medical
-            checkups. This App carries simple tips and advice to help you
-            maintain a healthy lifestyle.
+            Este é um projeto gratuito com fins institucionais criado para
+            auxiliar na classificação de grupos de risco dentro da problemática:
+            Síndrome Respiratória Aguda.
+            <br />
+            <br />
+            Este foi um trabalho feito em Nextjs com uso de typescript e backend
+            em python.
           </p>
         </div>
 
         <div className="flex flex-col items-start justify-center gap-3">
-          <p className="text-main font-medium">Devs</p>
+          <p className="font-bold">- Devs -</p>
 
-          <a href="#">Emmanuel Rodrigues</a>
-          <a href="#">Nikollas Rufino</a>
-          <a href="#">Italo Gonçalves</a>
+          <a className="underline" href="https://github.com/im4nu">
+            Emmanuel Rodrigues
+          </a>
+          <a className="underline" href="https://github.com/Ndav07">
+            Nikollas Rufino
+          </a>
+          <a className="underline" href="#">
+            Italo Gonçalves
+          </a>
         </div>
 
         <div className="flex flex-col items-start justify-center gap-3">
-          <p className="text-main font-medium">Instituição</p>
+          <p className="font-bold">- Instituição -</p>
 
           <a href="#">UNIFAP</a>
+        </div>
+
+        <div className="flex w-full items-center">
+          <p className="text-center">
+            Pi3 - UNIFAP todos os direitos reservados, Design por:{" "}
+            <a
+              className="underline font-bold"
+              href="https://www.linkedin.com/in/m4nu/"
+            >
+              Emmanuel Rodrigues
+            </a>
+          </p>
         </div>
       </footer>
 
       <DarkModeButton />
       <a
         href="#"
-        className="rounded-full bg-main shadow-xl shadow-gray-300 dark:shadow-main/30 fixed bottom-4 right-4 p-6"
+        className="rounded-full bg-main dark:bg-white shadow-xl shadow-dark-300 dark:shadow-main/30 fixed bottom-4 right-4 p-6"
       >
-        <ArrowUp2 color="#fff" size={18} />
+        <ArrowUp2 size={18} className="text-white dark:text-main" />
       </a>
     </main>
   );

@@ -17,10 +17,10 @@ export default function DarkModeButton() {
   }
   return (
     <button
-      className="rounded-full bg-main shadow-xl shadow-gray-300 dark:shadow-main/30 fixed bottom-24 right-4 p-6"
+      className="rounded-full bg-main dark:bg-white shadow-xl shadow-dark-300 dark:shadow-main/30 fixed bottom-24 right-4 p-6"
       onClick={handleTheme}
     >
-      <Moon size={18} color="#fff" />
+      <Moon size={18} className="text-white dark:text-main" />
     </button>
   );
 }
