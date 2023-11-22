@@ -75,7 +75,7 @@ export default function Home() {
               <input
                 type="text"
                 placeholder="Digite sua resposta"
-                className="bg-white dark:bg-dark flex items-start justify-center shadow-xl shadow-gray-300 dark:shadow-main/30 rounded-lg p-6"
+                className="bg-white dark:bg-dark border-gray-200 flex items-start justify-center shadow-xl shadow-gray-300 dark:shadow-main/30 rounded-lg p-6"
               />
             </div>
           ))}
