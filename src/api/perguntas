@@ -1,0 +1,62 @@
+// CS_SEXO 0: F, 1: M
+// (df['OBESIDADE'] == "1"),
+// (df['ASMA'] == "1"),
+// (df['CS_GESTANT'].isin(["1", "2", "3"])),
+// (df['FATOR_RISC'] == "1"),
+//  (df['DISPNEIA'] == "1"),
+//   (df['CARDIOPATI'] == "1"),
+// HEPATICA  0: Não; 1: Sim
+
+
+{
+  "CS_SEXO": "0",
+  "NU_IDADE_N": 25,
+  "CS_GESTANT": "1",
+  "NOSOCOMIAL": "0",
+  "AVE_SUINO": "0",
+  "FEBRE": "1",
+  "TOSSE": "0",
+  "GARGANTA": "0",
+  "DISPNEIA": "0",
+  "DESC_RESP": "0",
+  "SATURACAO": "0",
+  "DIARREIA": "0",
+  "VOMITO": "0",
+  "OUTRO_SIN": "0",
+  "PUERPERA": "0",
+  "FATOR_RISC": "0",
+  "CARDIOPATI": "0",
+  "HEMATOLOGI": "0",
+  "SIND_DOWN": "0",
+  "HEPATICA": "0",
+  "ASMA": "0",
+  "DIABETES": "0",
+  "NEUROLOGIC": "0",
+  "PNEUMOPATI": "0",
+  "IMUNODEPRE": "0",
+  "RENAL": "0",
+  "OBESIDADE": "0",
+  "VACINA": "0",
+  "ANTIVIRAL": "0",
+  "UTI": "0",
+  "SUPORT_VEN": "0",
+  "EVOLUCAO": "0",
+  "DOR_ABD": "0",
+  "FADIGA": "0",
+  "PERD_OLFT": "0",
+  "PERD_PALA": "0",
+  "TOMO_RES": "0",
+  "VACINA_COV": "0"
+}
+
+Você possui Diabetes?
+Você possui Asma?
+Você possui Hepatite?
+Você possui Cardiopatia?
+Você possui Dispneia?
+Você possui Obesidade?
+Você possui algum fator de risco crônico?
+Qual sua idade?
+Você é Gestante de quantos meses? 
+- Não sou - 1 a 3 meses - 3 a 6 meses - 6 a 9 meses
+Se for gestante é igual a 1 Manu
