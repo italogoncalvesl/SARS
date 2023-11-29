@@ -6,22 +6,22 @@ export const cardsData = [
     icon: <Blur size="32" color="#4D77FF" variant="TwoTone" />,
     title: "Fora do grupo de risco",
     description:
-      "After conducting an examination with a specialist we can help find the right healing method",
+      "Pessoas mais jovens e saudáveis, sem condições crônicas significativas, que têm menor probabilidade de enfrentar complicações graves em casos de infecções respiratórias. No entanto, a adoção de medidas preventivas é fundamental para todos.",
   },
+
+  // {
+  //   id: 1,
+  //   icon: <BoxSearch size="32" color="#4D77FF" variant="TwoTone" />,
+  //   title: "Grupo de baixo risco",
+  //   description:
+  //     "After conducting an examination with a specialist we can help find the right healing method",
+  // },
 
   {
     id: 1,
-    icon: <BoxSearch size="32" color="#4D77FF" variant="TwoTone" />,
-    title: "Grupo de baixo risco",
-    description:
-      "After conducting an examination with a specialist we can help find the right healing method",
-  },
-
-  {
-    id: 2,
     icon: <EmojiSad size="32" color="#4D77FF" variant="TwoTone" />,
     title: "Grupo de alto risco",
     description:
-      "After conducting an examination with a specialist we can help find the right healing method",
+      "Indivíduos mais suscetíveis a complicações graves de síndrome respiratória aguda, como idosos e aqueles com doenças crônicas, devido à fragilidade do sistema imunológico.",
   },
 ];
