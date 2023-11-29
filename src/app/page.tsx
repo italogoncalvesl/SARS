@@ -1,17 +1,9 @@
 import CardList from "@/components/CardList";
+import Form from "@/components/Form";
 import Nav from "@/components/Nav";
 import DarkModeButton from "@/components/ui/darkModeButton";
-import { ArrowDown, ArrowUp2, Send } from "iconsax-react";
+import { ArrowDown, ArrowUp2 } from "iconsax-react";
 import Image from "next/image";
-
-const questionsData = [
-  { id: 0, title: "Pergunta 1" },
-  { id: 1, title: "Pergunta 2" },
-  { id: 2, title: "Pergunta 3" },
-  { id: 3, title: "Pergunta 4" },
-  { id: 4, title: "Pergunta 5" },
-  { id: 5, title: "Pergunta 6" },
-];
 
 export default function Home() {
   return (
@@ -56,35 +48,16 @@ export default function Home() {
 
       <section
         id="form"
-        className="flex flex-col items-center justify-center w-4/5 gap-6"
+        className="flex flex-col items-center justify-center w-full gap-6"
       >
-        <div className="text-center items-center justify-center gap-8 flex flex-col">
+        <div className="text-center items-center justify-center gap-8 flex w-4/5 flex-col">
           <h2 className="text-4xl">Responda algumas breves perguntas</h2>
           <p className="text-gray-700 dark:text-gray-300 text-sm font-medium">
             Elas serão importantes para classificarmos você em algum grupo
           </p>
         </div>
 
-        <form className="flex gap-8 flex-col items-center justify-center">
-          {questionsData.map((question) => (
-            <div
-              key={question.id}
-              className="flex flex-col items-start justify-center w-full gap-3"
-            >
-              <p>{question.title}</p>
-              <input
-                type="text"
-                placeholder="Digite sua resposta"
-                className="bg-white dark:bg-dark border-gray-200 flex items-start justify-center shadow-xl shadow-gray-300 dark:shadow-main/30 rounded-lg p-6"
-              />
-            </div>
-          ))}
-
-          <button className="bg-main rounded-lg py-4 w-[200px] flex flex-row text-white items-center justify-center gap-2">
-            <p>Enviar</p>
-            <Send variant="TwoTone" color="#fff" size={32} />
-          </button>
-        </form>
+        <Form />
       </section>
 
       <footer className="flex bg-main text-sm px-[10%] text-white flex-col items-start justify-center w-full py-[100px] gap-8 dark:text-white">
