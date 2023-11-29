@@ -436,7 +436,11 @@ export default function Form() {
       >
         <Image
           alt="Ilustação"
-          src={"/images/ilustration.svg"}
+          src={
+            classification === "Fora do grupo de risco"
+              ? "/images/ilustration.svg"
+              : "/images/sad_ilustration.svg"
+          }
           width={278}
           height={208}
           className="w-1/2 h-1/3"
