@@ -60,7 +60,7 @@ export default function Home() {
         <Form />
       </section>
 
-      <footer className="flex bg-main text-sm px-[10%] text-white flex-col items-start justify-center w-full py-[100px] gap-8 dark:text-white">
+      <footer className="flex bg-main text-sm px-[10%] text-white flex-col items-start justify-center w-full pt-[100px] pb-[150px] gap-8 dark:text-white">
         <div className="flex flex-col items-start justify-center gap-3">
           <Image
             alt="Logomarca"
@@ -83,21 +83,26 @@ export default function Home() {
         <div className="flex flex-col items-start justify-center gap-3">
           <p className="font-bold">- Devs -</p>
 
-          <a className="underline" href="https://github.com/im4nu">
-            Emmanuel Rodrigues
+          <a href="https://github.com/im4nu">
+            <span className="underline">Emmanuel Rodrigues</span> - WebDesign e
+            Front-end
           </a>
-          <a className="underline" href="https://github.com/Ndav07">
-            Nikollas Rufino
+          <a href="https://github.com/Ndav07">
+            <span className="underline">Nikollas Rufino</span> - Backend e
+            Machine Learning
           </a>
-          <a className="underline" href="https://github.com/italogoncalvesl">
-            Italo Gonçalves
+          <a href="https://github.com/italogoncalvesl">
+            <span className="underline">Italo Gonçalves</span> - Backend e
+            Machine Learning
           </a>
         </div>
 
         <div className="flex flex-col items-start justify-center gap-3">
           <p className="font-bold">- Instituição -</p>
 
-          <a href="#">UNIFAP</a>
+          <a className="underline" href="https://www.instagram.com/unifapce/">
+            UNIFAP
+          </a>
         </div>
 
         <div className="flex w-full items-center">
