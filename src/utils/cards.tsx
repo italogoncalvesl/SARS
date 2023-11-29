@@ -12,7 +12,7 @@ export const cardsData = [
   {
     id: 1,
     icon: <BoxSearch size="32" color="#4D77FF" variant="TwoTone" />,
-    title: "Potencial do grupo de risco",
+    title: "Grupo de baixo risco",
     description:
       "After conducting an examination with a specialist we can help find the right healing method",
   },
@@ -20,7 +20,7 @@ export const cardsData = [
   {
     id: 2,
     icon: <EmojiSad size="32" color="#4D77FF" variant="TwoTone" />,
-    title: "Grupo de risco",
+    title: "Grupo de alto risco",
     description:
       "After conducting an examination with a specialist we can help find the right healing method",
   },
